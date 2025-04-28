@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail - The Fragrance Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #fefefe, #f7f2f2);
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 0;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      color: #777;
+    }
+
+    .container {
+      display: flex;
+      gap: 40px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 450px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .thumbnails {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .thumbnails img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .thumbnails img:hover {
+      border-color: #ff6f61;
+    }
+
+    .product-details {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .product-details h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 24px;
+      color: #b49374;
+      margin: 15px 0;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #888;
+      margin-left: 10px;
+      font-size: 18px;
+    }
+
+    .btn-add {
+      background-color: #ff6f61;
+      color: #fff;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .btn-add:hover {
+      background-color: #e55d51;
+      transform: scale(1.05);
+    }
+
+    .tabs {
+      margin-top: 40px;
+    }
+
+    .tab-buttons {
+      display: flex;
+      gap: 20px;
+      cursor: pointer;
+    }
+
+    .tab-buttons div {
+      padding: 10px 20px;
+      background-color: #f5f5f5;
+      border-radius: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .tab-buttons div.active, .tab-buttons div:hover {
+      background-color: #ff6f61;
+      color: #fff;
+    }
+
+    .tab-content {
+      margin-top: 20px;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .tab-content p {
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      font-style: italic;
+      color: #444;
+    }
+
+    hr {
+      margin: 50px auto;
+      width: 60%;
+      border: 0;
+      border-top: 1px solid #eee;
+    }
+
+    footer {
+      background: #f5f5f5;
+      padding: 20px 0;
+      text-align: center;
+      color: #888;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>THÉMIA</h1>
+    <p>Fragrance of Elegance & Nature</p>
+  </header>
+
+  <div class="container">
+    <div class="gallery">
+        <!-- เปลี่ยนรูปหลัก -->
+      <img src="https://i.postimg.cc/Nj26bwHJ/Chat-GPT-Image-Apr-21-2025-12-18-17-PM.png" alt="Sandal Skin Main">
+      <div class="thumbnails">
+          <!-- เปลี่ยนรูปรอง -->
+        <img src="https://i.postimg.cc/nL8vPwKH/Chat-GPT-Image-Apr-21-2025-12-21-58-PM.png" alt="Thumbnail 1">
+        <img src="https://i.postimg.cc/wT7LTd0q/Chat-GPT-Image-Apr-23-2025-08-17-10-PM.png" alt="Thumbnail 2">
+        <img src="https://i.postimg.cc/7PBSkL1t/Chat-GPT-Image-Apr-23-2025-08-17-12-PM.png" alt="Thumbnail 3">
+      </div>
+    </div>
+    <div class="product-details">
+      <h1>Sandal Skin</h1>
+      <p>จัดจำหน่ายโดย <strong>THÉMIA</strong></p>
+      <div class="price">
+        ฿5,500 <span class="old-price">฿7,800</span>
+      </div>
+      <!-- ปุ่มเพิ่มในตะกร้า -->
+<button class="btn-add">เพิ่มในตะกร้า</button>
+
+<!-- Popup เลือกขนาด -->
+<div id="sizeModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); justify-content:center; align-items:center;">
+  <div style="background:#fff; padding:30px; border-radius:10px; text-align:center; width:300px;">
+    <h3 style="margin-bottom:15px;">เลือกขนาดน้ำหอม</h3>
+    <select id="sizeSelect" style="padding:10px; width:100%; border-radius:5px; margin-bottom:20px;">
+      <option value="30ml">30 ml</option>
+      <option value="50ml">50 ml</option>
+      <option value="100ml">100 ml</option>
+    </select>
+    <button onclick="confirmAdd()" style="background:#ff6f61; color:#fff; padding:10px 20px; border:none; border-radius:20px; cursor:pointer;">ยืนยัน</button>
+  </div>
+</div>
+<!-- JavaScript สำหรับควบคุม Popup -->
+<script>
+  const modal = document.getElementById('sizeModal');
+  const addButton = document.querySelector('.btn-add');
+
+  addButton.addEventListener('click', () => {
+    modal.style.display = 'flex';
+  });
+
+  function confirmAdd() {
+    const size = document.getElementById('sizeSelect').value;
+    alert('เพิ่ม Green Horizon ขนาด ' + size + ' ลงในตะกร้าเรียบร้อย!');
+    modal.style.display = 'none';
+  }
+
+  // ปิด Popup เมื่อคลิกพื้นที่นอกกล่อง
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+      <div class="tabs">
+        <div class="tab-buttons">
+          <div class="active">รายละเอียดสินค้า</div>
+          <div>การจัดส่งและการคืนของ</div>
+        </div>
+        <div class="tab-content">
+          <p>
+            ความหอมอันอบอุ่นและนุ่มลึก <strong>Sandal Skin</strong> ผสานกลิ่นไม้จันทน์ขาวกับมัสก์และวานิลลา ให้ความรู้สึกสบาย ผ่อนคลาย เปรียบเสมือนการโอบกอดที่อ่อนโยน เติมเต็มช่วงเวลาแห่งความสุขและความสงบในทุก ๆ วัน
+          </p>
+          <p>
+            เหมาะสำหรับผู้ที่ชื่นชอบความเรียบง่ายแต่มีเสน่ห์ในแบบของตัวเอง กลิ่นนี้ช่วยเติมเต็มวันธรรมดาให้พิเศษขึ้น เหมาะกับการใช้ในทุกวัน ไม่ว่าจะอยู่บ้าน ออกไปทำงาน หรือพบปะผู้คน ช่วยเสริมภาพลักษณ์ให้ดูอบอุ่น 
+          </p>
+          <ul>
+            <li><strong>Top Notes:</strong> Creamy Sandalwood</li>
+            <li><strong>Heart Notes:</strong> Soft Musk, Cashmere</li>
+            <li><strong>Base Notes:</strong> Vanilla, Amber</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <hr>
+
+  <!-- รีวิวลูกค้า -->
+  <section style="text-align:center; margin-bottom:50px;">
+    <h2 style="font-family: 'Playfair Display', serif; font-size:24px; margin-bottom:15px;">เสียงจากผู้ใช้จริง</h2>
+    <p style="font-size:18px; color:#555;">⭐⭐⭐⭐⭐</p>
+    <p style="max-width:600px; margin:10px auto; color:#666; font-style:italic;">
+        "ชอบมากกก เป็นกลิ่นที่อบอุ่น นุ่มนวล ใช้ได้ทุกวัน ฉีดแล้วรู้สึกสบายใจ ให้ความรู้สึกอ่อนโยนมาก ๆ ค่ะ"
+    </p>
+    <p style="color:#999;">— ฝน</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 THÉMIA. Crafted with elegance.
+  </footer>
+</body>
+</html>
